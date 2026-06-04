@@ -105,8 +105,15 @@ const App = () => {
     <>
       <div className="app-header">
         <div className="container text-center">
-          {/* Resim yolu public klasörünü doğrudan okuyacak şekilde güncellendi */}
-          <h1><img src="./randevu-takip.png" alt="logo" style={{ width: 40, height: 40, marginRight: 10, verticalAlign: "middle", mixBlendMode: "screen", filter: "drop-shadow(0 0 6px rgba(129,140,248,0.6))" }} />Randevu Takip</h1>
+          {/* Resim kaynağı doğrudan asla kırılmayacak internet linkine bağlandı */}
+          <h1>
+            <img 
+              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=512&h=512&auto=format&fit=crop" 
+              alt="logo" 
+              style={{ width: 40, height: 40, marginRight: 10, verticalAlign: "middle", borderRadius: "8px", mixBlendMode: "screen", filter: "drop-shadow(0 0 6px rgba(129,140,248,0.6))" }} 
+            />
+            Randevu Takip
+          </h1>
           <p className="mb-0">Tüm randevularınızı kolayca yönetin</p>
         </div>
       </div>
@@ -119,7 +126,6 @@ const App = () => {
           </div>
         ) : (
           <>
-            {/* Yeni Randevu Ekle butonu */}
             <div className="d-flex justify-content-center mb-4">
               <button
                 className="btn text-white d-flex align-items-center gap-2"
