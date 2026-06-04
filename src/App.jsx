@@ -105,12 +105,12 @@ const App = () => {
     <>
       <div className="app-header">
         <div className="container text-center">
-          {/* Resim kaynağı doğrudan asla kırılmayacak internet linkine bağlandı */}
+          {/* Senin eklediğin logo.png'yi public klasöründen tam burada okutuyoruz */}
           <h1>
             <img 
-              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=512&h=512&auto=format&fit=crop" 
+              src="./logo.png" 
               alt="logo" 
-              style={{ width: 40, height: 40, marginRight: 10, verticalAlign: "middle", borderRadius: "8px", mixBlendMode: "screen", filter: "drop-shadow(0 0 6px rgba(129,140,248,0.6))" }} 
+              style={{ width: 40, height: 40, marginRight: 10, verticalAlign: "middle", mixBlendMode: "screen", filter: "drop-shadow(0 0 6px rgba(129,140,248,0.6))" }} 
             />
             Randevu Takip
           </h1>
