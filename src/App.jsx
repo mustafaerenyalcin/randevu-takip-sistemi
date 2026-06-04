@@ -105,7 +105,8 @@ const App = () => {
     <>
       <div className="app-header">
         <div className="container text-center">
-          <h1><img src="/favicon.svg.png" alt="logo" style={{ width: 40, height: 40, marginRight: 10, verticalAlign: "middle", mixBlendMode: "screen", filter: "drop-shadow(0 0 6px rgba(129,140,248,0.6))" }} />Randevu Takip</h1>
+          {/* Resim yolu public klasörünü doğrudan okuyacak şekilde güncellendi */}
+          <h1><img src="./randevu-takip.png" alt="logo" style={{ width: 40, height: 40, marginRight: 10, verticalAlign: "middle", mixBlendMode: "screen", filter: "drop-shadow(0 0 6px rgba(129,140,248,0.6))" }} />Randevu Takip</h1>
           <p className="mb-0">Tüm randevularınızı kolayca yönetin</p>
         </div>
       </div>

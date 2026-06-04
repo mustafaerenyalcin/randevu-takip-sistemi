@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-* { box-sizing: border-box; }
+* { 
+  box-sizing: border-box; 
+}
 
 body {
   font-family: 'Inter', -apple-system, sans-serif;
@@ -9,199 +11,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Header ── */
-.app-header {
-  background: linear-gradient(135deg, #1a1f3a 0%, #0f1628 100%);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-  padding: 2rem 0 1.8rem;
-  margin-bottom: 2rem;
+/* ── Global Scrollbar (Kaydırma Çubuğu) Stilleri ── */
+::-webkit-scrollbar { 
+  width: 6px; 
 }
-
-.app-header h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #818cf8, #60a5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.5px;
+::-webkit-scrollbar-track { 
+  background: #0a0f1e; 
 }
-
-.app-header p {
-  color: #64748b;
-  font-size: 0.95rem;
+::-webkit-scrollbar-thumb { 
+  background: #1e293b; 
+  border-radius: 3px; 
 }
-
-/* ── Özet Kartlar ── */
-.ozet-kart {
-  border-radius: 16px !important;
-  border: none !important;
-  padding: 0.2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.ozet-kart:hover { transform: translateY(-4px); }
-
-.ozet-kart.toplam    { background: linear-gradient(135deg, #3730a3, #4f46e5); box-shadow: 0 8px 32px rgba(79,70,229,0.3); }
-.ozet-kart.bekleyen  { background: linear-gradient(135deg, #92400e, #d97706); box-shadow: 0 8px 32px rgba(217,119,6,0.3); }
-.ozet-kart.tamamlanan{ background: linear-gradient(135deg, #065f46, #059669); box-shadow: 0 8px 32px rgba(5,150,105,0.3); }
-.ozet-kart.iptal     { background: linear-gradient(135deg, #7f1d1d, #dc2626); box-shadow: 0 8px 32px rgba(220,38,38,0.3); }
-
-.ozet-kart .card-body { padding: 1.4rem 1rem; }
-.ozet-kart .ozet-sayi { font-size: 2.6rem; font-weight: 800; color: #fff; line-height: 1; }
-.ozet-kart .ozet-icon { font-size: 1.8rem; opacity: 0.8; }
-.ozet-kart .ozet-label { font-size: 0.8rem; color: rgba(255,255,255,0.75); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.3rem; }
-
-/* ── Form Kartı ── */
-.form-card {
-  background: #111827 !important;
-  border: 1px solid rgba(99,102,241,0.2) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-}
-
-.form-card .card-header {
-  background: linear-gradient(90deg, rgba(99,102,241,0.15), rgba(96,165,250,0.1)) !important;
-  border-bottom: 1px solid rgba(99,102,241,0.2) !important;
-  border-radius: 16px 16px 0 0 !important;
-  padding: 1rem 1.5rem;
-}
-
-.form-card .form-control,
-.form-card .form-select {
-  background: #0f172a !important;
-  border: 1px solid rgba(99,102,241,0.25) !important;
-  color: #e2e8f0 !important;
-  border-radius: 10px !important;
-  padding: 0.6rem 0.9rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.form-card .form-control:focus,
-.form-card .form-select:focus {
-  border-color: #6366f1 !important;
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.2) !important;
-}
-
-.form-card .form-label {
-  color: #94a3b8;
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  margin-bottom: 0.4rem;
-}
-
-/* ── Arama Filtre ── */
-.filtre-card {
-  background: #111827 !important;
-  border: 1px solid rgba(99,102,241,0.15) !important;
-  border-radius: 14px !important;
-}
-
-.filtre-card .form-control,
-.filtre-card .form-select {
-  background: #0f172a !important;
-  border: 1px solid rgba(99,102,241,0.2) !important;
-  color: #e2e8f0 !important;
-  border-radius: 10px !important;
-}
-
-.filtre-card .form-control:focus,
-.filtre-card .form-select:focus {
-  border-color: #6366f1 !important;
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
-}
-
-.filtre-card .input-group-text {
-  background: #0f172a !important;
-  border: 1px solid rgba(99,102,241,0.2) !important;
-  color: #6366f1 !important;
-  border-radius: 10px 0 0 10px !important;
-}
-
-/* ── Randevu Kartları ── */
-.randevu-kart {
-  background: #111827 !important;
-  border: 1px solid rgba(255,255,255,0.07) !important;
-  border-radius: 14px !important;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  overflow: hidden;
-}
-
-.randevu-kart:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-  border-color: rgba(99,102,241,0.3) !important;
-}
-
-.randevu-kart.gecmis {
-  border-color: rgba(245,158,11,0.3) !important;
-  background: linear-gradient(135deg, #111827, #1a1500) !important;
-}
-
-.kart-ustbant {
-  height: 4px;
-  width: 100%;
-}
-.kart-ustbant.bekliyor   { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
-.kart-ustbant.tamamlandi { background: linear-gradient(90deg, #10b981, #34d399); }
-.kart-ustbant.iptal      { background: linear-gradient(90deg, #ef4444, #f87171); }
-
-.hizmet-badge {
-  font-size: 0.7rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 20px;
-  background: rgba(99,102,241,0.15);
-  color: #818cf8;
-  border: 1px solid rgba(99,102,241,0.25);
-  font-weight: 600;
-}
-
-/* ── Bölüm Başlıkları ── */
-.bolum-baslik {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #475569;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  margin-bottom: 1rem;
-}
-
-/* ── Butonlar ── */
-.btn-kaydet {
-  background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
-  border: none !important;
-  border-radius: 10px !important;
-  font-weight: 600;
-  padding: 0.55rem 1.4rem;
-  box-shadow: 0 4px 14px rgba(99,102,241,0.4);
-  transition: box-shadow 0.2s, transform 0.1s;
-}
-.btn-kaydet:hover { box-shadow: 0 6px 20px rgba(99,102,241,0.5); transform: translateY(-1px); }
-
-.btn-temizle {
-  background: rgba(255,255,255,0.06) !important;
-  border: 1px solid rgba(255,255,255,0.1) !important;
-  border-radius: 10px !important;
-  color: #94a3b8 !important;
-  font-weight: 600;
-  padding: 0.55rem 1.4rem;
-}
-
-/* ── Modal Animasyonları ── */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0)    scale(1);    }
-}
-
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0a0f1e; }
-::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
