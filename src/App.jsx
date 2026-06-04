@@ -5,6 +5,7 @@ import AramaFiltre from "./components/arama-filtre/arama-filtre.component";
 import RandevuForm from "./components/randevu-form/randevu-form.component";
 import RandevuListe from "./components/randevu-liste/randevu-liste.component";
 import "./App.css";
+import siteLogosu from "./assets/logo.png";
 
 const App = () => {
   const [randevular, setRandevular] = useState(() => {
@@ -105,10 +106,10 @@ const App = () => {
     <>
       <div className="app-header">
         <div className="container text-center">
-          {/* Senin eklediğin logo.png'yi public klasöründen tam burada okutuyoruz */}
           <h1>
+            {/* İmport edilen yerel logo değişkenini buraya bastık */}
             <img 
-              src="./logo.png" 
+              src={siteLogosu} 
               alt="logo" 
               style={{ width: 40, height: 40, marginRight: 10, verticalAlign: "middle", mixBlendMode: "screen", filter: "drop-shadow(0 0 6px rgba(129,140,248,0.6))" }} 
             />
